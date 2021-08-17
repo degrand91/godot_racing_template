@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/spritesheet_vehicles.png" type="Texture" id=1]
+[ext_resource path="res://src/Car.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 56.0261, 31.7784 )
+
+[node name="Car" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="spritesheet_vehicles" type="Sprite" parent="."]
+rotation = 1.5708
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 71, 0, 71, 116 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
